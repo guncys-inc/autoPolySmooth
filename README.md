@@ -40,3 +40,5 @@ Set 'div' or 'level' of the history 'autoPS#' added to the polygon object select
 Successful if polySmooth is done at rendering.
 
 Once you have restarted Maya, you need to repeat the 'setMel' step.
+
+[![](https://img.youtube.com/vi/WEPSfjKdDUc/0.jpg)](https://www.youtube.com/watch?v=WEPSfjKdDUc)
