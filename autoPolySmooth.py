@@ -2,36 +2,6 @@
 import maya.mel as mel
 import pymel.core as pm
 
-melCmd ="""
-global proc autoSmooth(int $v){
-	if($v == 0){
-		string $psFaces[] = `ls -et polySmoothFace`;
-		for($poly in $psFaces)
-		{
-			if (attributeExists("div", $poly)){
-				setAttr ($poly + ".divisions") 0;
-			}
-			if (attributeExists("level", $poly)){
-				setAttr ($poly + ".subdivisionLevels") 0;
-			}
-		}
-	}else{
-		string $psFaces[] = `ls -et polySmoothFace`;
-		
-		for($poly in $psFaces)
-		{
-			if (attributeExists("div", $poly)){
-				int $div = `getAttr ($poly+".div")`;
-				setAttr ($poly + ".divisions") $div;
-			}
-			if (attributeExists("level", $poly)){
-				int $level = `getAttr ($poly+".level")`;			
-				setAttr ($poly + ".subdivisionLevels") $level;				
-			}
-		}	
-	}
-}
-"""
 #======================================================================#
 def addCustomAttrs():
 	selected = pm.ls(sl=True)
@@ -66,4 +36,4 @@ def setMel():
 			postMel.set(postMel.get()+';')	
 		postMel.set(postMel.get()+'autoSmooth 0;')
 	
-	mel.eval(melCmd)
+	
