@@ -7,7 +7,7 @@ Also, release polySmooth immediately after rendering.(using postMel)
 
 ### 1. Please put autoPolySmooth.py in your PYTHONPATH
 
-Download `autoPolySmooth.py` `autoSmooth.mel` and put each it in the folder set in PYTHONPATH and MAYA_SCRIPT_PATH,
+Download `autoPolySmooth.py` `autoSmooth.mel` and put each it in the folder set in `PYTHONPATH` and `MAYA_SCRIPT_PATH`,
 or add a path with `sys.path.append()`.
 
 
